@@ -1,0 +1,601 @@
+Model {
+  Name			  "ref4_rt"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "all"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Oct 01 16:33:34 2003"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "plambrec"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Nov 13 14:04:50 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "inf"
+  SolverMode		  "Auto"
+  Solver		  "FixedStepDiscrete"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "Ts"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "10000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "ref4_rt"
+    Location		    [88, 107, 1061, 501]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "0"
+      Position		      [235, 230, 255, 250]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux1"
+      Ports		      [1, 7]
+      Position		      [600, 43, 605, 277]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "7"
+      BusSelectionMode	      off
+      Port {
+	PortNumber		1
+	Name			"Force"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"Reference"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"Derivative of jerk"
+	PropagatedSignals	"derivative of jerk"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		4
+	Name			"Jerk"
+	PropagatedSignals	"jerk"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		5
+	Name			"Acceleration"
+	PropagatedSignals	"acceleration"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		6
+	Name			"Velocity"
+	PropagatedSignals	"velocity"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		7
+	Name			"Position"
+	PropagatedSignals	"position"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Feedforward Force"
+      Ports		      [1]
+      Position		      [885, 37, 915, 73]
+      Floating		      off
+      Location		      [494, 515, 849, 807]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "3"
+      YMin		      "-150"
+      YMax		      "175"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "50000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Generate\nFeedforward"
+      Ports		      [1, 1]
+      Position		      [505, 135, 570, 185]
+      SourceBlock	      "motion/Real Time/Generate\nFeedforward"
+      SourceType	      ""
+      m1		      "20"
+      m2		      "10"
+      k1		      "10"
+      k2		      "10"
+      c			      "6e5"
+      k12		      "500"
+      Ts		      "Ts"
+      S1		      "1"
+      S2		      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Generate Profile"
+      Ports		      [2, 2]
+      Position		      [375, 145, 450, 205]
+      SourceBlock	      "motion/Real Time/Generate Profile"
+      SourceType	      ""
+      Ts		      "Ts"
+      Tset		      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch"
+      Ports		      [2, 1]
+      Position		      [310, 232, 340, 268]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Memory
+      Name		      "Memory2"
+      Position		      [335, 150, 355, 170]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      X0		      "0"
+      InheritSampleTime	      on
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [5, 1]
+      Position		      [145, 55, 150, 235]
+      ShowName		      off
+      Inputs		      "5"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Plan Trajectory\n(with displays)"
+      Ports		      [2, 1, 0, 1]
+      Position		      [235, 130, 315, 190]
+      SourceBlock	      "motion/Real Time/Plan Trajectory\n(with display"
+"s)"
+      SourceType	      "SubSystem"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      on
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Profiles"
+      Ports		      [5]
+      Position		      [720, 111, 755, 279]
+      Floating		      off
+      Location		      [858, 53, 1213, 808]
+      Open		      on
+      NumInputPorts	      "5"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+	axes5			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "50"
+      YMin		      "-1000~-50~-5~-1~-0.5"
+      YMax		      "1000~50~5~1~1"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "50000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Reference Trajectory"
+      Ports		      [1]
+      Position		      [805, 72, 835, 108]
+      Floating		      off
+      Location		      [126, 514, 481, 806]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "3"
+      YMin		      "-0.2"
+      YMax		      "1.2"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "50000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Trigger/Enable\nStep"
+      Position		      [235, 250, 255, 270]
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Ts"
+      Position		      [185, 165, 205, 185]
+      ShowName		      off
+      Value		      "Ts"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "a"
+      Position		      [50, 137, 90, 153]
+      Value		      "5"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "d"
+      Position		      [50, 207, 90, 223]
+      Value		      "1000"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "j"
+      Position		      [50, 172, 90, 188]
+      Value		      "45"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "p"
+      Position		      [50, 67, 90, 83]
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "v"
+      Position		      [50, 102, 90, 118]
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Line {
+      SrcBlock		      "v"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "a"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "j"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "d"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "p"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Force"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      DstBlock		      "Feedforward Force"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Reference"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      DstBlock		      "Reference Trajectory"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Derivative of jerk"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      3
+      DstBlock		      "Profiles"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Jerk"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      4
+      DstBlock		      "Profiles"
+      DstPort		      2
+    }
+    Line {
+      Name		      "Acceleration"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      5
+      DstBlock		      "Profiles"
+      DstPort		      3
+    }
+    Line {
+      Name		      "Velocity"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      6
+      DstBlock		      "Profiles"
+      DstPort		      4
+    }
+    Line {
+      Name		      "Position"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      7
+      DstBlock		      "Profiles"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Plan Trajectory\n(with displays)"
+      SrcPort		      1
+      DstBlock		      "Memory2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Memory2"
+      SrcPort		      1
+      DstBlock		      "Generate Profile"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Generate Profile"
+      SrcPort		      2
+      Points		      [15, 0; 0, -95; -195, 0]
+      DstBlock		      "Plan Trajectory\n(with displays)"
+      DstPort		      trigger
+    }
+    Line {
+      SrcBlock		      "Generate Profile"
+      SrcPort		      1
+      DstBlock		      "Generate\nFeedforward"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Generate\nFeedforward"
+      SrcPort		      1
+      DstBlock		      "Demux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      Points		      [10, 0; 0, -60]
+      DstBlock		      "Generate Profile"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Trigger/Enable\nStep"
+      SrcPort		      1
+      DstBlock		      "Manual Switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "0"
+      SrcPort		      1
+      DstBlock		      "Manual Switch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      DstBlock		      "Plan Trajectory\n(with displays)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ts"
+      SrcPort		      1
+      DstBlock		      "Plan Trajectory\n(with displays)"
+      DstPort		      2
+    }
+    Annotation {
+      Position		      [133, 31]
+      Text		      "Define sample time, e.g.: Ts = 0.01;  "
+    }
+  }
+}

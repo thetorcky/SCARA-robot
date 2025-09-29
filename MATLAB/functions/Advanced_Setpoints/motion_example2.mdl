@@ -1,0 +1,1033 @@
+Model {
+  Name			  "motion_example2"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "all"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Mar 07 14:50:28 2000"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "plambrec"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Oct 06 11:20:12 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:212>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "3"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "motion_example2"
+    Location		    [26, 74, 880, 436]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      StateSpace
+      Name		      "Controller"
+      Position		      [485, 233, 545, 267]
+      A			      "Ac"
+      B			      "Bc"
+      C			      "Cc"
+      D			      "Dc"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux1"
+      Ports		      [1, 3]
+      Position		      [330, 228, 335, 272]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "[1 1 5]"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux3"
+      Ports		      [1, 5]
+      Position		      [595, 93, 600, 137]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "5"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Feedforward"
+      Ports		      [1, 1]
+      Position		      [150, 218, 210, 252]
+      AttributesFormatString  "%<BlockChoice>"
+      LinkData {
+	BlockName		"4th order cont"
+	DialogParameters {
+	  m1			  "30"
+	  m2			  "0"
+	  k1			  "20"
+	  k2			  "0"
+	  k12			  "0"
+	}
+	BlockName		"4th order continuous"
+	DialogParameters {
+	  c			  "6e5"
+	}
+      }
+      ShowPortLabels	      off
+      BlockChoice	      "4th order continuous"
+      TemplateBlock	      "motion/Feedforward Controllers/Feedforward"
+      MemberBlocks	      "2nd order continuous,2nd order discrete,3d orde"
+"r continuous,3d order discrete,4th order continuous,4th order digital,4th ord"
+"er discrete"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Feedforward"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [20, 40, 40, 60]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "4th order continuous"
+	  Ports			  [1, 1]
+	  Position		  [100, 40, 140, 80]
+	  SourceBlock		  "motion/Feedforward Controllers/4th order co"
+"ntinuous"
+	  SourceType		  "Continuous Time Feedforward"
+	  m1			  "20"
+	  m2			  "10"
+	  k1			  "10"
+	  k2			  "10"
+	  c			  "6e5"
+	  k12			  "500"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [200, 40, 220, 60]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "4th order continuous"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "4th order continuous"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Forces"
+      Ports		      [1]
+      Position		      [450, 52, 480, 88]
+      Floating		      off
+      Location		      [875, 598, 1230, 890]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "3"
+      YMin		      "-150"
+      YMax		      "200"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData7"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "50000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From1"
+      Position		      [275, 76, 295, 94]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "e1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From10"
+      Position		      [550, 76, 570, 94]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "p1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From11"
+      Position		      [550, 106, 570, 124]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "pr1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From12"
+      Position		      [375, 51, 395, 69]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "F1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From13"
+      Position		      [375, 71, 395, 89]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "Fc1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From5"
+      Position		      [550, 36, 570, 54]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "e1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From6"
+      Position		      [575, 46, 595, 64]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "x1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From7"
+      Position		      [550, 56, 570, 74]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "F1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From8"
+      Position		      [575, 66, 595, 84]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "Fc1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From9"
+      Position		      [275, 56, 295, 74]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "p1"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto1"
+      Position		      [450, 221, 470, 239]
+      ShowName		      off
+      GotoTag		      "e1"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto2"
+      Position		      [380, 221, 400, 239]
+      ShowName		      off
+      GotoTag		      "p1"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto6"
+      Position		      [805, 256, 825, 274]
+      ShowName		      off
+      GotoTag		      "x1"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto7"
+      Position		      [380, 181, 400, 199]
+      ShowName		      off
+      GotoTag		      "F1"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto8"
+      Position		      [580, 221, 600, 239]
+      ShowName		      off
+      GotoTag		      "Fc1"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto9"
+      Position		      [355, 256, 375, 274]
+      ShowName		      off
+      GotoTag		      "pr1"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch"
+      Ports		      [2, 1]
+      Position		      [605, 239, 635, 286]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "1"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch4"
+      Ports		      [2, 1]
+      Position		      [270, 224, 300, 271]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "1"
+      action		      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Motion System"
+      Ports		      [1, 1]
+      Position		      [700, 248, 760, 282]
+      AttributesFormatString  "%<BlockChoice>"
+      LinkData {
+	BlockName		"Parametrized\n4th order"
+	DialogParameters {
+	  k1			  "10"
+	  k2			  "10"
+	  c			  "6e5"
+	}
+      }
+      ShowPortLabels	      off
+      BlockChoice	      "Parametrized 4th order"
+      TemplateBlock	      "motion/Motion Systems1/Motion System"
+      MemberBlocks	      "2nd order,4th order,6th order,Parametrized 4th "
+"order"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Motion System"
+	Location		[150, 180, 648, 480]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [20, 40, 40, 60]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Parametrized\n4th order"
+	  Ports			  [1, 1]
+	  Position		  [100, 40, 140, 80]
+	  SourceBlock		  "motion/Motion Systems1/Parametrized\n4th or"
+"der"
+	  SourceType		  "Parametrized 4th order motion system model"
+	  m1			  "20"
+	  m2			  "10"
+	  k1			  "10"
+	  k2			  "10"
+	  c			  "6e5"
+	  k12			  "500"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [200, 40, 220, 60]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Parametrized\n4th order"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Parametrized\n4th order"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [10, 1]
+      Position		      [625, 45, 630, 135]
+      ShowName		      off
+      Inputs		      "10"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      Ports		      [2, 1]
+      Position		      [410, 50, 415, 90]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Profile Generator"
+      Ports		      [0, 1]
+      Position		      [40, 220, 95, 250]
+      AttributesFormatString  "%<BlockChoice>"
+      LinkData {
+	BlockName		"Derivative of Jerk"
+	DialogParameters {
+	  Ts			  "0"
+	  j			  "45"
+	}
+      }
+      ShowPortLabels	      off
+      BlockChoice	      "Derivative of Jerk"
+      TemplateBlock	      "motion/Profile Generators/Profile Generator"
+      MemberBlocks	      "Acceleration,Derivative of Jerk,Jerk,dJerk with"
+" error correction"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Profile Generator"
+	Location		[150, 180, 648, 480]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Reference
+	  Name			  "Derivative of Jerk"
+	  Ports			  [0, 1]
+	  Position		  [100, 40, 140, 80]
+	  AncestorBlock		  "library/Derivative of jerk\nprofile generat"
+"or"
+	  SourceBlock		  "motion/Profile Generators/Derivative of Jer"
+"k"
+	  SourceType		  "4th Order Profile Generator"
+	  t0			  ".3"
+	  x			  "1"
+	  v			  "1"
+	  a			  "5"
+	  j			  "45"
+	  d			  "1000"
+	  Ts			  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "profile"
+	  Position		  [200, 40, 220, 60]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Derivative of Jerk"
+	  SrcPort		  1
+	  DstBlock		  "profile"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Rigid Body Feedforward\nwith 4th order trajecto"
+"ry"
+      Ports		      [1, 1]
+      Position		      [150, 278, 210, 312]
+      AttributesFormatString  "%<BlockChoice>"
+      LinkData {
+	BlockName		"4th order cont"
+	DialogParameters {
+	  k1			  "10"
+	  k2			  "10"
+	}
+	BlockName		"4th order continuous"
+	DialogParameters {
+	  m1			  "30"
+	  m2			  "0"
+	  k1			  "20"
+	  k2			  "0"
+	  k12			  "0"
+	}
+      }
+      ShowPortLabels	      off
+      BlockChoice	      "4th order continuous"
+      TemplateBlock	      "motion/Feedforward Controllers/Feedforward"
+      MemberBlocks	      "2nd order continuous,2nd order discrete,3d orde"
+"r continuous,3d order discrete,4th order continuous,4th order digital,4th ord"
+"er discrete"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Rigid Body Feedforward\nwith 4th order trajec"
+"tory"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [20, 40, 40, 60]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "4th order continuous"
+	  Ports			  [1, 1]
+	  Position		  [100, 40, 140, 80]
+	  SourceBlock		  "motion/Feedforward Controllers/4th order co"
+"ntinuous"
+	  SourceType		  "Continuous Time Feedforward"
+	  m1			  "30"
+	  m2			  "0"
+	  k1			  "20"
+	  k2			  "0"
+	  c			  "6e5"
+	  k12			  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [200, 40, 220, 60]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "4th order continuous"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "4th order continuous"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [655, 255, 675, 275]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum4"
+      Ports		      [2, 1]
+      Position		      [405, 240, 425, 260]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [650, 75, 710, 105]
+      VariableName	      "y"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "2e-4"
+      SaveFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "c1"
+      Position		      [570, 267, 585, 283]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "pos. error"
+      Ports		      [2]
+      Position		      [330, 54, 360, 96]
+      Floating		      off
+      Location		      [861, 67, 1275, 531]
+      Open		      on
+      NumInputPorts	      "2"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"Position"
+	axes2			"Position Error"
+      }
+      Grid		      "on"
+      TimeRange		      "3"
+      YMin		      "0~-0.006"
+      YMax		      "1~0.006"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "run makeplant"
+      Ports		      []
+      Position		      [45, 65, 146, 125]
+      ShowName		      off
+      SourceBlock	      "motion/General/run makeplant"
+      SourceType	      "Script Runner"
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Motion System"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum4"
+      SrcPort		      1
+      Points		      [0, 0; 5, 0]
+      Branch {
+	DstBlock		"Goto1"
+	DstPort			1
+      }
+      Branch {
+	Points			[20, 0]
+	DstBlock		"Controller"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Profile Generator"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	DstBlock		"Feedforward"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 60]
+	DstBlock		"Rigid Body Feedforward\nwith 4th order trajec"
+"tory"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Motion System"
+      SrcPort		      1
+      Points		      [0, 0; 25, 0]
+      Branch {
+	DstBlock		"Goto6"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 45; -375, 0]
+	DstBlock		"Sum4"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      Points		      [0, 0; 25, 0]
+      Branch {
+	DstBlock		"Sum4"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Goto2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      Points		      [15, 0; 0, -30; 10, 0]
+      Branch {
+	DstBlock		"Goto7"
+	DstPort			1
+      }
+      Branch {
+	Points			[300, 0]
+	DstBlock		"Sum1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      DstBlock		      "Forces"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      2
+      DstBlock		      "Mux"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      3
+      DstBlock		      "Mux"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      4
+      DstBlock		      "Mux"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "From1"
+      SrcPort		      1
+      DstBlock		      "pos. error"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From9"
+      SrcPort		      1
+      DstBlock		      "pos. error"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From5"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From6"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From7"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "From8"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "From10"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      3
+      DstBlock		      "Goto9"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From11"
+      SrcPort		      1
+      DstBlock		      "Demux3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "c1"
+      SrcPort		      1
+      DstBlock		      "Manual Switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Controller"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Goto8"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Manual Switch"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From12"
+      SrcPort		      1
+      DstBlock		      "Mux2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Feedforward"
+      SrcPort		      1
+      DstBlock		      "Manual Switch4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch4"
+      SrcPort		      1
+      DstBlock		      "Demux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rigid Body Feedforward\nwith 4th order trajecto"
+"ry"
+      SrcPort		      1
+      Points		      [15, 0; 0, -35]
+      DstBlock		      "Manual Switch4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From13"
+      SrcPort		      1
+      DstBlock		      "Mux2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      5
+      DstBlock		      "Mux"
+      DstPort		      10
+    }
+    Annotation {
+      Position		      [730, 160]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "bottom"
+      Text		      "1.   position error\n2.   position \n3.   feedf"
+"orward force\n4.   feedback force\n5.   reference trajectory\n6.   derivative"
+" of jerk\n7.   jerk\n8.   acceleration\n9.   velocity\n10. position"
+    }
+    Annotation {
+      Position		      [95, 32]
+      Text		      "Continuous time example"
+    }
+  }
+}
