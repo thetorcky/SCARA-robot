@@ -73,7 +73,7 @@ for i = 1:length(indices)
         
         case "GMPE"
             if options.senseAtEither
-                bestGMPE = min(data.GMPEsenseAtShoulders, data.GMPEsenseAtElbows);
+                bestGMPE = min(data.GMPE_senseAtShouldersstitched, data.GMPE_senseAtElbowsstitched);
                 plotAtlas(data.a, data.b, data.w, bestGMPE, "GMPE", rectangleWidthMask=mask);
                 % title("GMPE atlas - best of either");
                 fprintf("Best GMPE = %f\n\n", min(bestGMPE(~mask), [], "all")*1e6);

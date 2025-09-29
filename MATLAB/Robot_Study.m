@@ -12,21 +12,21 @@ addpath(genpath('functions\'))
 %% Link lengths
 tic
 % From example
-selectExample = 20;
-AExamples = [1.1000    1.3500    2.0000    2.0000    1.4000    0.5500    0.6000    0.2000    0.7000    1.0000    0.8500    1.0000    1.2000    1.5000    1.9000    0.1940    0.2880    0.9500    0.3500    1.3000    0.2880    0.2880    230.00];
-BExamples = [0.5500    0.6000    0.2000    0.7000    1.0000    1.1000    1.3500    2.0000    2.0000    1.4000    0.8500    1.0000    1.2000    1.5000    2.1000    0.2940    0.2880    1.7000    1.7000    1.7000    0.2880    0.2880    230.00];
-WExamples = [1.3500    1.0500    0.8000    0.3000    0.6000    1.3500    1.0500    0.8000    0.3000    0.6000    1.3000    1.0000    0.6000    0.0000    0.7035    0.0770    0.0600    0.3500    0.9500    0.0000    0.0600    0.0600    137.50];
-txtExampl = ["Ia"      "IIa"     "IIIa"    "IVa"     "Va"      "Ib"      "IIb"     "IIIb"    "IVb"     "Vb"      "Imid"    "IImid"   "Vmid"    "w=0"     "Hunag"   "Demjen"  "Dynam"   "LS1"     "LS2"     "LS3"     "LS4.1"   "LS4.2"   "DexTAR"];
+selectExample = 24;
+AExamples = [1.1000    1.3500    2.0000    2.0000    1.4000    0.5500    0.6000    0.2000    0.7000    1.0000    0.8500    1.0000    1.2000    1.5000    1.9000    0.1940    0.2880    0.9500    0.3500    1.3000    0.2880    0.2880    230.00    1.025    1.35    1.35    0.75];
+BExamples = [0.5500    0.6000    0.2000    0.7000    1.0000    1.1000    1.3500    2.0000    2.0000    1.4000    0.8500    1.0000    1.2000    1.5000    2.1000    0.2940    0.2880    1.7000    1.7000    1.7000    0.2880    0.2880    230.00    1.625    1.65    1.65    1.25];
+WExamples = [1.3500    1.0500    0.8000    0.3000    0.6000    1.3500    1.0500    0.8000    0.3000    0.6000    1.3000    1.0000    0.6000    0.0000    0.7035    0.0770    0.0600    0.3500    0.9500    0.0000    0.0600    0.0600    137.50    0.350    0       0       1   ];
+txtExampl = ["Ia"      "IIa"     "IIIa"    "IVa"     "Va"      "Ib"      "IIb"     "IIIb"    "IVb"     "Vb"      "Imid"    "IImid"   "Vmid"    "w=0"     "Hunag"   "Demjen"  "Dynam"   "LS1"     "LS2"     "LS3"     "LS4.1"   "LS4.2"   "DexTAR"  "TC12"   "TC3"   "TC4o1" "TC4o2"];
 A = AExamples(selectExample);
 B = BExamples(selectExample);
 W = WExamples(selectExample);
 robotTitle = txtExampl(selectExample);
 
 % From user input
-A = 1.025;                  % [m]
-B = 1.625;                 % [m]
-W = 0.35;                % [m]
-robotTitle = "User input";
+% A = 1.4750;                  % [m]
+% B = 1.05;                 % [m]
+% W = 0.375;                %  [m]
+% robotTitle = "User input";
 
 fprintf("Starting study for robot %s.\n", robotTitle);
 
