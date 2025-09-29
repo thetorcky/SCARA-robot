@@ -1,0 +1,126 @@
+# Windows default autosave extension
+*.asv
+
+# OSX / *nix default autosave extension
+*.m~
+
+# Compiled MEX binaries (all platforms)
+*.mex*
+
+# Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
+
+# Generated helpsearch folders
+helpsearch*/
+
+# Simulink code generation folders
+slprj/
+sccprj/
+
+# Matlab code generation folders
+codegen/
+
+# Simulink autosave extension
+*.autosave
+
+# Simulink cache files
+*.slxc
+
+# Octave session info
+octave-workspace
+
+# SolidWorks temporary files
+~$*.SLDPRT
+~$*.SLDASM
+
+# SolidWorks simulation files
+*.gsz
+
+*.SL4
+
+*.CWR
+
+*.LOG
+
+*.MFC
+
+*.BD2
+
+*.BDF
+
+*.CNT
+
+*.DSP
+
+*.EFF
+
+*.ELF
+
+*.GEN
+
+*.IDA
+
+*.LCD
+
+*.LDS
+
+*.MAS
+
+*.opm
+
+*.OUT
+
+*.STE
+
+*.STG
+
+*.txt
+
+*.DP3
+
+*.SL3
+
+*.MSG
+
+*.dat
+
+*.LCM
+
+*.MSF
+
+*.RRM
+
+*.VMW
+
+*.SSF
+
+*.SEU
+
+*.CVC
+
+*.HRS
+
+*.RMX
+
+*.BSM
+
+*.MBE
+
+*.PCS
+
+*.Par
+
+*.MS0
+
+*.DF1
+
+*.DF2
+
+*.PCD
+
+*.PCG
+
+*.MOM
+
+*.dmp
